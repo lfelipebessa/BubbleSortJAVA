@@ -14,13 +14,13 @@ public class App {
         // recebe o valor digitado pelo usuário
         tam = sc.nextInt();
 
-        //recebendo valores
+        // recebendo valores
         for (int i = 0; i < tam; i++) {
             System.out.println("Informe o " + (i + 1) + " valor:");
             numeros[i] = sc.nextInt();
         }
 
-        //imprimindo o vetor original
+        // imprimindo o vetor original
         System.out.print("Vetor original: ");
         System.out.print("[ ");
 
@@ -32,26 +32,28 @@ public class App {
         }
         System.out.println(" ]");
 
-        //variavel temporaria para realizar a ordenacao
-        int  temp;
-        //ordenando os vetores de maneira crescente(bubble sort)
-        for(int k = 0; k < tam - 1; k++){
-            for(int l = 0; l < tam - 1; l++){
-                if(numeros[l] > numeros[l+1]){
+        // variavel temporaria para realizar a ordenacao
+        int temp;
+        // ordenando os vetores de maneira crescente(bubble sort)
+        for (int k = 0; k < tam - 1; k++) {
+            for (int l = 0; l < tam - 1; l++) {
+                if (numeros[l] > numeros[l + 1]) {
                     temp = numeros[l];
                     numeros[l] = numeros[l + 1];
                     numeros[l + 1] = temp;
                 }
             }
         }
-        //printando valores ordenados 
+        // printando valores ordenados
         System.out.print("Vetor ordenado: [ ");
-        for(int m = 0; m < tam; m++){
+        for (int m = 0; m < tam; m++) {
             System.out.print(numeros[m]);
-            if(m < tam-1){
+            if (m < tam - 1) {
                 System.out.print(", ");
             }
         }
         System.out.println(" ]");
+
+        sc.close();
     }
 }
